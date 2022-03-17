@@ -131,9 +131,9 @@ footer {
   background: #040f16;
   color: #ececec;
   padding: 50px 15% 25px;
-
+  border: solid red 1px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
 }
 
 footer h4 {
@@ -163,3 +163,37 @@ footer a:hover {
 }
 
 /* Media queries */
+@media (max-width: 768px) {
+ header {
+   grid-template-columns: 1fr;
+ } 
+ main {
+   grid-template-columns: 1fr;
+   gap: 50px 0px;
+ }
+}
+
+@media (max-width: 1279px) {
+  .splash {
+    display: none;
+  }
+  main {
+    width: 90%;
+  }
+  footer {
+    grid-template-columns: 1fr 1fr;
+    padding: 25px;
+    text-align: center;
+  }
+  
+  footer h4 {
+    display:inline-block;
+    border: none
+  }
+
+  footer ul {
+    list-style: none;
+  }
+}
+
+
